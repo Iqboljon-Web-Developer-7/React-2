@@ -4,6 +4,8 @@ import websiteLogo from "../../assets/header/logo.png";
 import profileLogo from "../../assets/header/Profile.svg";
 import cartLogo from "../../assets/header/Cart.svg";
 
+const data = ["Discovery", "About", "Contact Us"];
+
 const Header = () => {
   return (
     <div className="navbar wrapper">
@@ -29,23 +31,13 @@ const Header = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-white"
           >
-            <li>
-              <a>Blogs</a>
-            </li>
-            <li>
-              <a>Discovery</a>
-              <ul className="p-2">
+            {data?.map((item) => {
+              return (
                 <li>
-                  <a>Blogs</a>
+                  <a href="#">{item}</a>
                 </li>
-                <li>
-                  <a>Projects</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Contact us</a>
-            </li>
+              );
+            })}
           </ul>
         </div>
         <a className="btn btn-ghost text-xl">
@@ -54,25 +46,13 @@ const Header = () => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li>
-            <details>
-              <summary>Discovery</summary>
-              <ul className="p-2 text-white">
-                <li>
-                  <a>Blogs</a>
-                </li>
-                <li>
-                  <a>Projects</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <a>About</a>
-          </li>
-          <li>
-            <a>Contact us</a>
-          </li>
+          {data?.map((item) => {
+            return (
+              <li>
+                <a href="#">{item}</a>
+              </li>
+            );
+          })}
         </ul>
       </div>
       <div className="navbar-end flex gap-4">
