@@ -1,8 +1,13 @@
 import React from "react";
 
+import bgImage from "../../assets/hero/bg-image.png";
+
 const Hero = () => {
   return (
-    <section className="hero min-h-screen relative">
+    <section
+      className="hero min-h-screen relative"
+      style={{ backgroundImage: `url(${bgImage}` }}
+    >
       <div className="hero__main bg-[#F7F8FACC] py-8 px-[10vw] text-center">
         <h2 className="text-[2rem] md:text-[2.5rem]">🌱</h2>
         <h1 className="text-[2rem] md:text-[2.5rem]">The nature candle</h1>
