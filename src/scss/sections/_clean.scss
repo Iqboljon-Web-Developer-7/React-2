@@ -1,0 +1,62 @@
+@use "../util" as *;
+.clean-container {
+  background-color: #f7f8fa;
+}
+.clean {
+  display: flex;
+  gap: 3%;
+  justify-content: space-between;
+  padding-bottom: rem(120);
+  &__info {
+    margin-top: rem(133);
+    h2 {
+      max-width: rem(330);
+      font-size: rem(40);
+      line-height: 1.1;
+    }
+    > div > p {
+      font-size: 1rem;
+      color: #56b280;
+      margin-top: 0.4rem;
+    }
+  }
+  .advantages {
+    margin-top: rem(38);
+    display: grid;
+    gap: 0.4rem;
+    .advantage {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      h4 {
+        font-weight: 500;
+      }
+      span {
+        font-weight: 100;
+      }
+    }
+  }
+  img {
+    margin-top: rem(214);
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 0.1rem;
+  }
+  button {
+    margin-top: rem(66);
+  }
+  @media (max-width: rem(1000)) {
+    flex-direction: column;
+    img {
+      margin-top: rem(60);
+    }
+    & {
+      padding-left: 10vw;
+    }
+  }
+  @media (max-width: rem(400)) {
+    & {
+      padding-left: 2vw;
+    }
+  }
+}
